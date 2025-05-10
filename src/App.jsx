@@ -8,7 +8,9 @@ import { Fragment } from 'react'
 function App() {
   return (
     <div>
-      <Router>
+      <Router
+        future={{ v7_startTransition: true }}
+      >
         <Routes>
           {routes.map(({ path, page: Page, isShowHeader }) => {
             const Layout = isShowHeader ? DefaultComponent : Fragment
